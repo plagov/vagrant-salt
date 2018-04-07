@@ -1,4 +1,4 @@
-BOX_IMAGE = "centos/7"
+BOX_IMAGE = "ubuntu/trusty64"
 NODES = 2
 
 Vagrant.configure("2") do |config|
@@ -7,6 +7,7 @@ Vagrant.configure("2") do |config|
     master.vm.box = BOX_IMAGE
     master.vm.network "private_network", ip: "192.168.10.10"
     master.vm.hostname = "master"
+    master.vm.synced_folder "salt/", "/srv/salt"
   end
 
   (1..NODES).each do |i|
