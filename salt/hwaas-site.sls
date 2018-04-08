@@ -1,3 +1,6 @@
+include:
+  - nodejs-package
+
 hwaas-site:
   user.present:
     - name: hwaas
@@ -15,6 +18,7 @@ hwaas-source:
     - require:
       - user: hwaas-site
       - pkg: git-client-package
+      - sls: nodejs-package
 
 npm-strict-ssl-certificate-false:
   cmd.wait:
