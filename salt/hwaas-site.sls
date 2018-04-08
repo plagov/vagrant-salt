@@ -12,6 +12,9 @@ hwaas-source:
     - name: https://github.com/floyd-may/hwaas
     - rev: master
     - target: /home/hwaas/hwaas-site
+    - require:
+      - user: hwaas-site
+      - pkg: git-client-package
 
 npm-strict-ssl-certificate-false:
   cmd.wait:

@@ -7,3 +7,5 @@ nodejs-repo:
 nodejs:
   pkg:
     - installed
+    - require:
+      - pkgrepo: nodejs-repo
