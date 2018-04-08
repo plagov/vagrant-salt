@@ -14,6 +14,7 @@ Vagrant.configure("2") do |config|
     config.vm.define "web#{i}" do |minion|
       minion.vm.box = BOX_IMAGE
       minion.vm.network "private_network", ip: "192.168.10.1#{i}"
+      minion.vm.network "forwarded_port", guest: 8000, host: "800#{i}", auto_correct: true
       minion.vm.hostname = "web#{i}"
     end
   end
