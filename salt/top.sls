@@ -1,4 +1,4 @@
 base:
   'web*':
     - nodejs-package
-    - hwaas-site
+    - hwaas-service
