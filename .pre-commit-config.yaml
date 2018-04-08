@@ -3,3 +3,4 @@
     hooks:
     -   id: trailing-whitespace
     -   id: check-yaml
+    -   id: end-of-file-fixer
