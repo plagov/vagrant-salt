@@ -3,3 +3,6 @@ base:
     - match: grain
     - nodejs-package
     - hwaas-service
+  'roles:load-balancing':
+    - match: grain
+    - load-balance
