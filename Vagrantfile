@@ -7,7 +7,8 @@ Vagrant.configure("2") do |config|
     master.vm.box = BOX_IMAGE
     master.vm.network "private_network", ip: "192.168.10.10"
     master.vm.hostname = "master"
-    master.vm.synced_folder "salt/", "/srv/salt"
+    master.vm.synced_folder "salt/", "/srv/salt", id: "states"
+    master.vm.synced_folder "pillar", "/srv/pillar", id: "pillars"
   end
 
   (1..NODES).each do |i|
