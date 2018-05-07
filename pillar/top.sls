@@ -4,3 +4,6 @@ base:
 
   'loadbalancer':
     - override
+  'roles:load-balancing':
+    - match: grain
+    - hwaas-sls
