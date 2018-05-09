@@ -24,6 +24,7 @@ Vagrant.configure("2") do |config|
     loadbalancer.vm.box = BOX_IMAGE
     loadbalancer.vm.network "private_network", ip: "192.168.10.20"
     loadbalancer.vm.network "forwarded_port", guest: 80, host: "8020", auto_correct: true
+    loadbalancer.vm.network "forwarded_port", guest: 443, host: "8030", auto_correct: true
     loadbalancer.vm.hostname = "loadbalancer"
   end
 

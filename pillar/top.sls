@@ -6,4 +6,4 @@ base:
     - override
   'roles:load-balancing':
     - match: grain
-    - hwaas-sls
+    - hwaas-ssl

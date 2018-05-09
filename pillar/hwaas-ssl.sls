@@ -1,4 +1,4 @@
-hwaas-sls:
+hwaas-ssl:
   cert-path:
     /etc/nginx/hwaas.local.crt
   cert-key-path:
